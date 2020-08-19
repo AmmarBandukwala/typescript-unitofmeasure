@@ -1,0 +1,33 @@
+{
+  "name": "typescript-unitofmeasure",
+  "version": "1.0.0",
+  "description": "typescript library for unit of measure conversions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmmarBandukwala/typescript-unitofmeasure.git"
+  },
+  "keywords": [],
+  "author": "Ammar Bandukwala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AmmarBandukwala/typescript-unitofmeasure/issues"
+  },
+  "homepage": "https://github.com/AmmarBandukwala/typescript-unitofmeasure#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
