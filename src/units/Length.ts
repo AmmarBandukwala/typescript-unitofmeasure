@@ -212,7 +212,7 @@ export class Length implements ILength {
                     result = '-';
                     break;
 		    }
-		    return result;
         }
+        return result;
     }
 }

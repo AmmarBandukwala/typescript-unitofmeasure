@@ -22,37 +22,37 @@ export interface IForce {
 
 export class Force implements IForce {
 	constructor(newtons: number) {
-		this._newtons = newtons;
+		this.newtons = newtons;
 	}
 
-	public _newtons = 0;
+	public newtons = 0;
 
 	get dyne(): number {
-		return this._newtons * 100000.0;
+		return this.newtons * 100000.0;
 	}
 
 	get kilogramsForce(): number {
-		return this._newtons / 9.80665002864;
+		return this.newtons / 9.80665002864;
 	}
 
 	get kilonewtons(): number {
-		return this._newtons / 1000.0;
+		return this.newtons / 1000.0;
 	}
 
 	get kiloPonds(): number {
-		return this._newtons / 9.80665002864;
+		return this.newtons / 9.80665002864;
 	}
 
 	get poundals(): number {
-		return this._newtons / 0.13825502798973041;
+		return this.newtons / 0.13825502798973041;
 	}
 
 	get poundsForce(): number {
-		return this._newtons / 4.4482216152605094;
+		return this.newtons / 4.4482216152605094;
 	}
 
 	get tonnesForce(): number {
-		return this._newtons / 9.80665002864 / 1000.0;
+		return this.newtons / 9.80665002864 / 1000.0;
 	}
 
 	static get Zero(): Force {
@@ -125,7 +125,7 @@ export class Force implements IForce {
 	}
 
 	public toString(): string {
-		const flag: boolean = this._newtons === 0.0;
+		const flag: boolean = this.newtons === 0.0;
 		let result: string;
 		if (flag) {
 			result = '-';

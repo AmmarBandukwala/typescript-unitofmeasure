@@ -28,49 +28,49 @@ export interface IFlow {
 
 export class Flow implements IFlow {
     constructor(cubicmeterspersecond: number) {
-        this._cubicMetersPerSecond = cubicmeterspersecond;
+        this.cubicMetersPerSecond = cubicmeterspersecond;
     }
 
-    public _cubicMetersPerSecond = 0;
+    public cubicMetersPerSecond = 0;
 
     get cubicFeetPerMinute(): number {
-        return this._cubicMetersPerSecond * 2118.880003;
+        return this.cubicMetersPerSecond * 2118.880003;
     }
 
     get cubicFeetPerSecond(): number {
-        return this._cubicMetersPerSecond * 35.314666213;
+        return this.cubicMetersPerSecond * 35.314666213;
     }
 
     get cubicMetersPerHour(): number {
-        return this._cubicMetersPerSecond * 3600.0;
+        return this.cubicMetersPerSecond * 3600.0;
     }
 
     get cubicMetersPerMinute(): number {
-        return this._cubicMetersPerSecond * 60.0;
+        return this.cubicMetersPerSecond * 60.0;
     }
 
     get millionUsGallonsPerDay(): number {
-        return this._cubicMetersPerSecond * 22.824465227;
+        return this.cubicMetersPerSecond * 22.824465227;
     }
 
     get millionCubicFeetPerDay(): number {
-        return this._cubicMetersPerSecond * 3.06;
+        return this.cubicMetersPerSecond * 3.06;
     }
 
     get gallonPerMinute(): number {
-        return this._cubicMetersPerSecond * 15852.0;
+        return this.cubicMetersPerSecond * 15852.0;
     }
 
     get barrelPerDay(): number {
-        return this._cubicMetersPerSecond * 543440.0;
+        return this.cubicMetersPerSecond * 543440.0;
     }
 
     get barrelPerMinute(): number {
-        return this._cubicMetersPerSecond * 377.389;
+        return this.cubicMetersPerSecond * 377.389;
     }
 
     get barrelPerHour(): number {
-        return this._cubicMetersPerSecond * 22643.3;
+        return this.cubicMetersPerSecond * 22643.3;
     }
 
     static get Zero(): Flow {
@@ -164,7 +164,7 @@ export class Flow implements IFlow {
     }
 
     public toString(): string {
-        const flag: boolean = this._cubicMetersPerSecond === 0.0;
+        const flag: boolean = this.cubicMetersPerSecond === 0.0;
         let result: string;
         if (flag) {
             result = '-';

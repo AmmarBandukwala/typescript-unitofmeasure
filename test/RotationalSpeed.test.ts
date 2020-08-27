@@ -1,4 +1,5 @@
 import { expect } from "chai";
+import { RotationalSpeed } from "../src/units/RotationalSpeed";
 
 describe("#", function () {
   // add a test hook
@@ -6,7 +7,11 @@ describe("#", function () {
     // ...some logic before each test is run
   });
 
-  it("", function () {
-    // do something to test
+  it("RotationalSpeed", function () {
+    var measure = new RotationalSpeed(10);
+    var isGood =
+      measure.revolutionsPerMinute === 600 && 
+      measure.revolutionsPerSecond === 10;
+    expect(isGood).equal(true);
   });
 });
